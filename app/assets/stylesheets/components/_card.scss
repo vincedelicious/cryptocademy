@@ -16,20 +16,28 @@
 
 .lesson-image {
   width: 250px;
-  top: 20px;
-  left: 20px;
+  top: 25px;
+  left: 25px;
   position: absolute;
   box-shadow: 10px 10px #5580E9;
 }
 
+.badge-points {
+  position: absolute;
+  top:15px;
+  right:0px;
+}
+
 .card-body-index {
-  padding-left: 300px;
+  padding-left: 325px;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 .card-header-index {
   background-color: black;
   color: white;
-  padding-left: 300px;
+  padding-left: 325px;
   min-height: 90px;
-  align-items: center;
+  padding-top: 25px;
 }
