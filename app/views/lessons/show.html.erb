@@ -1,14 +1,23 @@
-<h1><- Lesson 1</h1>
-    <div class="container">
-      <div class="card" style="width: 100%;">
-        <h2 class="card-header">What is a blockchain?</h2>
-        <div class="card-body">
-          <p class="card-text">A blockchain is a decentralized ledger of all transactions across a peer-to-peer network. Using this technology, participants can confirm transactions without a need for a central clearing authority. Potential applications can include fund transfers, settling trades, voting and many other issues.</p>
-          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-            Previous
-            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-              Next
-            </button>
-          </div>
+<div class="container container-show mt-5">
+  <div class="banner-show">
+    <h1><%= @lesson.title %></h1>
+  </div>
+  <div class="row ms-5 me-5">
+    <a class="card-link-show" href="/lessons/<%= @lesson.id %>">
+      <div class="card card-show m-2 col-12">
+        <img class="lesson-image-show" src="<%= asset_path("lesson_backgroun.png") %>" alt="Image">
+        <div class="card-header card-header-show align-items-center text-align-center">
+          <h2 class="card-title card-title-show"><%= @lesson.title %></h2>
+        </div>
+        <div class="card-body card-body-show">
+          <p class="card-text"><%= @lesson.description %></p>
+          <p class="card-text"><small class="text-muted">Points: <%= @lesson.points %></small></p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Previous</button>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Next</button>
         </div>
       </div>
+    </a>
+  </div>
+</div>
