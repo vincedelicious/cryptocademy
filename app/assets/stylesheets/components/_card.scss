@@ -5,6 +5,7 @@
 .card-link-index {
   text-decoration: none;
   color: inherit;
+
   &:hover {
     color: inherit;
   }
@@ -40,4 +41,41 @@
   padding-left: 325px;
   min-height: 90px;
   padding-top: 25px;
+}
+
+.card-show {
+  min-height: 305px;
+}
+
+.card-link-show {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.card-title-show {
+  font-weight: 700;
+}
+
+.lesson-image-show {
+  width: 250px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  box-shadow: 10px 10px #5580E9;
+}
+
+.card-body-show {
+  padding-left: 300px;
+}
+
+.card-header-show {
+  background-color: black;
+  color: white;
+  padding-left: 300px;
+  min-height: 90px;
+  align-items: center;
 }
