@@ -13,7 +13,11 @@
           </div>
           <div class="card-body card-body-index">
             <p class="card-text"><%= lesson.description %></p>
-            <p class="card-text"><small class="text-muted">Points: <%= lesson.points %></small></p>
+            <% if lesson.points != 0 %>
+              <div class="badge-points">
+                <%= render "shared/badges", points: lesson.points %>
+              </div>
+            <% end %>
           </div>
         </div>
       </a>
