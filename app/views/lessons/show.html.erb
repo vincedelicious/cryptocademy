@@ -1,9 +1,10 @@
 <div class="container container-show">
-  <div class="row ms-5 me-5" data-controller="open-popup" data-controller="content-swap">
+  <div class="row ms-5 me-5" data-controller="open-popup">
     <button type="Submit" class="btn btn-primary" data-action="click->open-popup#openPopup">Start</button>
-    <div class="popupShow" id="popup-show" data-open-popup-target="popup">
+    <div class="popupShow" id="popup-show" data-open-popup-target="popup" data-controller="content-swap">
       <% @cards.each do |card| %>
         <%= render "shared/popups", card: card %>
       <% end %>
     </div>
   </div>
+</div>

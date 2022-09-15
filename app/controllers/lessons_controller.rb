@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   def index
     @lessons = Lesson.all
+    @cards = Card.all
   end
 
   def show
