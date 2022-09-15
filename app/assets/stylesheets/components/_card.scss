@@ -21,13 +21,13 @@
   top: 25px;
   left: 25px;
   position: absolute;
-  box-shadow: 10px 10px #5580E9;
+  box-shadow: 10px 10px #5580e9;
 }
 
 .badge-points {
   position: absolute;
-  top:15px;
-  right:0px;
+  top: 15px;
+  right: 0px;
 }
 
 .card-body-index {
@@ -44,12 +44,15 @@
   padding-top: 25px;
 }
 
-
 // SHOW PAGE
 .card-show {
   height: 80vh;
   padding: 0px;
-  visibility: hidden;
+  // visibility: hidden;
+}
+
+.active-card {
+  visibility: visible;
 }
 
 .card-link-show {
@@ -62,9 +65,9 @@
 }
 
 .popupShow {
-  top:0%;
+  top: 0%;
   left: 50%;
-  transform: translate(0%,-100%) scale(0.1);
+  transform: translate(0%, -100%) scale(0.1);
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
 }
@@ -72,18 +75,18 @@
 .open-popup {
   visibility: visible;
   top: 50%;
-  transform: translate(0%,0%) scale(1);
+  transform: translate(0%, 0%) scale(1);
 }
 
 .card-title-show {
   font-weight: 900;
-  margin-top:30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .lesson-image-show {
   width: 150px;
-  box-shadow: 10px 10px #5580E9;
+  box-shadow: 10px 10px #5580e9;
 }
 
 .card-body-show {

@@ -3,9 +3,9 @@
     <h1>Tracks</h1>
     <p>Description of what the track will be like</p>
   </div>
-  <div class="row ms-5 me-5">
+  <div class="row ms-5 me-5" data-controller="open-popup">
     <% @lessons.each do |lesson| %>
-      <a class="card-link-index" href="/lessons/<%= lesson.id %>">
+      <a class="card-link-index"  data-action="click->open-popup#openPopup">
         <div class="card card-index m-2 col-12">
           <img class="lesson-image" src="<%= asset_path('lesson_backgroun.png') %>" alt="Image">
           <div class="card-header card-header-index align-items-center text-align-center">
@@ -19,6 +19,13 @@
               </div>
             <% end %>
           </div>
+        </div>
+        <div class="popupShow" id="popup-show" data-open-popup-target="popup" data-controller="content-swap">
+          <% @cards.each do |card| %>
+            <% if card.lesson_id = lesson.id %>
+              <%= render "shared/popups", card: card %>
+            <% end %>
+          <% end %>
         </div>
       </a>
     <% end %>
