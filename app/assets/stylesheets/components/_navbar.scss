@@ -6,6 +6,7 @@
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 10;
+  border-bottom: 2px solid #8860D0;
 }
 
 .navbar-lewagon-white {
@@ -23,6 +24,7 @@
 .nav-link {
   color: white;
   font-size: 20px;
+
   &:hover {
     color: #a149e9;
   }
