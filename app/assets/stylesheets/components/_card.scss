@@ -102,3 +102,43 @@
   min-height: 90px;
   align-items: center;
 }
+
+// DASHBOARD
+.card-dashboard
+ {
+  min-height: 305px;
+  min-width:300px;
+}
+
+.card-link-dashboard
+ {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.card-title-dashboard
+ {
+  font-weight: 700;
+}
+
+.card-body-dashboard
+ {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color:black;
+}
+
+.card-header-dashboard
+ {
+  background-color: black;
+  color: white;
+  text-align: center;
+  min-height: 90px;
+  padding-top: 25px;
+}
