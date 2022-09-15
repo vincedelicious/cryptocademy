@@ -1,3 +1,4 @@
+// INDEX PAGE
 .card-index {
   min-height: 305px;
 }
@@ -43,8 +44,11 @@
   padding-top: 25px;
 }
 
+
+// SHOW PAGE
 .card-show {
-  min-height: 305px;
+  height: 80vh;
+  padding: 0px;
 }
 
 .card-link-show {
@@ -56,63 +60,41 @@
   }
 }
 
+.popupShow {
+  top:0%;
+  left: 50%;
+  transform: translate(0%,-100%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(0%,0%) scale(1);
+}
+
 .card-title-show {
-  font-weight: 700;
+  font-weight: 900;
+  margin-top:30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .lesson-image-show {
-  width: 250px;
-  top: 20px;
-  left: 20px;
-  position: absolute;
+  width: 150px;
   box-shadow: 10px 10px #5580E9;
 }
 
 .card-body-show {
-  padding-left: 300px;
+  justify-content: center;
+  text-align: center;
 }
 
 .card-header-show {
+  border-radius: 20px 20px 0px 0px;
   background-color: black;
   color: white;
-  padding-left: 300px;
-  min-height: 90px;
-  align-items: center;
-}
-
-.card-show {
-  min-height: 305px;
-}
-
-.card-link-show {
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    color: inherit;
-  }
-}
-
-.card-title-show {
-  font-weight: 700;
-}
-
-.lesson-image {
-  width: 250px;
-  top: 20px;
-  left: 20px;
-  position: absolute;
-  box-shadow: 10px 10px #5580E9;
-}
-
-.card-body-show {
-  padding-left: 300px;
-}
-
-.card-header-show {
-  background-color: black;
-  color: white;
-  padding-left: 300px;
+  text-align: center;
   min-height: 90px;
   align-items: center;
 }

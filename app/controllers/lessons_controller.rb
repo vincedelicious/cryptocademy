@@ -5,5 +5,6 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
+    @cards = Card.where(lesson: @lesson)
   end
 end
