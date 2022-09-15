@@ -2,7 +2,7 @@
   <div class="row ms-5 me-5" data-controller="open-popup" data-controller="content-swap">
     <button type="Submit" class="btn btn-primary" data-action="click->open-popup#openPopup">Start</button>
     <div class="popupShow" id="popup-show" data-open-popup-target="popup">
-      <%= @cards.each do |card| %>
+      <% @cards.each do |card| %>
         <%= render "shared/popups", card: card %>
       <% end %>
     </div>
