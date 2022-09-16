@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ContentSwapController from "./content_swap_controller"
+application.register("content-swap", ContentSwapController)
+
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
 

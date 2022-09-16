@@ -1,24 +1,10 @@
 <div class="container container-show">
   <div class="row ms-5 me-5" data-controller="open-popup">
     <button type="Submit" class="btn btn-primary" data-action="click->open-popup#openPopup">Start</button>
-    <div class="popupShow" id="popup-show" data-open-popup-target="popup">
-      <div class="card card-show m-2 col-12">
-        <div class="card-header card-header-show align-items-center text-align-center">
-          <div class="d-flex">
-            <i class="fa-regular fa-circle-xmark" data-action="click->open-popup#closePopup"></i>
-            <h2 class="card-title card-title-show"><%= @lesson.title %></h2>
-          </div>
-        </div>
-        <div class="card-body card-body-show">
-          <p class="card-text"><%= @lesson.description %></p>
-          <p class="card-text"><small class="text-muted">Points: <%= @lesson.points %></small></p>
-        </div>
-        <img class="lesson-image-show" src="<%= asset_path("lesson_backgroun.png") %>" alt="Image">
-        <div class="d-flex col-11 justify-content-between mb-3 ms-4 ps-4">
-          <%= render "shared/buttons_left", tag: "Back", link: "#" %>
-          <%= render "shared/buttons_right", tag: "Next", link: "#" %>
-        </div>
-      </div>
+    <div class="popupShow" id="popup-show" data-open-popup-target="popup" data-controller="content-swap">
+      <% @cards.each do |card| %>
+        <%= render "shared/popups", card: card %>
+      <% end %>
     </div>
   </div>
 </div>

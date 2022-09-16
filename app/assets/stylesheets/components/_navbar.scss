@@ -12,6 +12,7 @@
 //   // background-color: white;
 // }
 
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -23,10 +24,12 @@
 .nav-link {
   color: white;
   font-size: 20px;
+
   &:hover {
     color: #a149e9;
   }
 }
+
 
 .h4 {
   color: white;
@@ -44,4 +47,8 @@
 
 .nav-item {
   text-shadow: 1px 1px 10px #110f16;
+}
+
+.nav-search {
+  width: 150px;
 }
