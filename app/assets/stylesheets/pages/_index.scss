@@ -1,2 +1,40 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body {
+  overflow-x: hidden;
+}
+
+// #videoBG {
+//   height: 100vh;
+//   position:relative;
+//   opacity: 0.8;
+//   margin-top: -10vh;
+// }
+
+ /* Video Styling */
+ #videoBG {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Content Overlay */
+.content {
+  position: absolute;
+  top: 50vh;
+  left: 43vw;
+}
+
+/* Button Style */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
