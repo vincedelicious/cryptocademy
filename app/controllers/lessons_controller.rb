@@ -11,6 +11,15 @@ class LessonsController < ApplicationController
     @answers = Answer.where(question: @questions)
   end
 
+  def search
+    if params[:query].present?
+      sql_query = 'title ILIKE :query OR description ILIKE :query'
+      @lessons = Lesson.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @lessons = []
+    end
+  end
+
   def quiz
     @lesson = Lesson.find(params[:id])
     @questions = Question.includes(:answers).where(lesson: @lesson)
@@ -27,13 +36,4 @@ class LessonsController < ApplicationController
     end
     @info = @info.to_json
   end
-
-  # {
-  #   question: "What is a Bitcoin?",
-  #   choice1: "A coin of some sort",
-  #   choice2: "A bit of a coin",
-  #   choice3: "Money$$$",
-  #   choice4: "Cryptocurrency",
-  #   answer: 4
-  # }
 end

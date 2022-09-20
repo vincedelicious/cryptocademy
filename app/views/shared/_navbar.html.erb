@@ -14,9 +14,16 @@
         <%# <% if user_signed_in? %>
         <li class="nav-item active">
           <li class="nav-item active">
-            <form class="d-flex nav-search" role="search">
+            <%# <form class="d-flex nav-search" role="search" method="get" action="/search" target="_blank" >
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+            </form> %>
+            <%= form_with url: search_path, method: :get, html: {target:"_blank"}, data:{turbo:false}, class: "d-flex" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Search"
+              %>
+            <% end %>
           </li>
           <%= link_to "Home", dashboard_path, class: "nav-link" %>
         </li>
