@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get "/dashboard", to: "pages#dashboard"
   get "/search", to: "lessons#search"
   resources :lessons, only: %i[index show] do
+    member do
+      get :quiz
+    end
     resources :cards, only: %i[index show]
   end
 

@@ -54,6 +54,9 @@
 
 .active-card {
   z-index: 1000;
+  .wrapper {
+    z-index: 1000;
+  }
 }
 
 .card-link-show {

@@ -7,6 +7,8 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
     @cards = Card.where(lesson: @lesson)
+    @questions = Question.where(lesson: @lesson)
+    @answers = Answer.where(question: @questions)
   end
 
   def search
@@ -16,5 +18,22 @@ class LessonsController < ApplicationController
     else
       @lessons = []
     end
+  end
+
+  def quiz
+    @lesson = Lesson.find(params[:id])
+    @questions = Question.includes(:answers).where(lesson: @lesson)
+    @info = []
+    @questions.each do |q|
+      hash = {
+        question: q.content,
+      }
+      q.answers.each do |a|
+        hash["choice#{a.option}".to_sym] = a.content
+        hash[:answer] = a.option if a.correct?
+      end
+      @info << hash
+    end
+    @info = @info.to_json
   end
 end
