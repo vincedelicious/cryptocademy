@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root to: "pages#landing"
   get "/dashboard", to: "pages#dashboard"
   resources :lessons, only: %i[index show] do
+    member do
+      get :quiz
+    end
     resources :cards, only: %i[index show]
   end
 
