@@ -15,46 +15,6 @@ body {
   background-color: #202225;
 }
 
-// .gradient-border {
-//   --borderWidth: 10px;
-//   background: #1D1F20;
-//   position: relative;
-//   border-radius: var(--borderWidth);
-// }
-// .gradient-border:after {
-//   content: '';
-//   position: absolute;
-//   top: calc(-1 * var(--borderWidth));
-//   left: calc(-1 * var(--borderWidth));
-//   height: calc(100% + var(--borderWidth) * 2);
-//   width: calc(100% + var(--borderWidth) * 2);
-//   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-//   border-radius: calc(2 * var(--borderWidth));
-//   z-index: -1;
-//   animation: animatedgradient 3s ease alternate infinite;
-//   background-size: 300% 300%;
-// }
-
-// @keyframes animatedgradient {
-// 	0% {
-// 		background-position: 0% 50%;
-// 	}
-// 	50% {
-// 		background-position: 100% 50%;
-// 	}
-// 	100% {
-// 		background-position: 0% 50%;
-// 	}
-// }
-
-// body{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 100vh;
-//   background: #131313;
-// }
-
 .track-container{
   position: relative;
 }
@@ -63,7 +23,6 @@ body {
   position: relative;
   width: 320px;
   height: 450px;
-  background: #232323;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -75,24 +34,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #a928dc;
-  clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
-}
-
-.track-container .track-card:hover:before{
-  clip-path: circle(300px at 80% -20%);
-}
-
-// Background Text of Card
-.track-container .track-card:after{
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255,255,25,0.05)
 }
 
 .track-container .track-card .imgBx{
@@ -101,14 +43,13 @@ body {
   transform: translateY(-50%);
   z-index: 10000;
   width: 100%;
-  height: 220px;
+  height: 270px;
   transition: 0.5s;
 }
 
 .track-container .track-card:hover .imgBx{
   top: 0%;
   transform: translateY(0%);
-
 }
 
 .track-container .track-card .imgBx img{
@@ -203,18 +144,6 @@ body {
   cursor: pointer;
 }
 
-.track-container .track-card .contentBx .color span:nth-child(2){
-  background: #9bdc28;
-}
-
-.track-container .track-card .contentBx .color span:nth-child(3){
-  background: #03a9f4;
-}
-
-.track-container .track-card .contentBx .color span:nth-child(4){
-  background: #e91e63;
-}
-
 .track-container .track-card .contentBx a{
   display: inline-block;
   padding: 10px 20px;
@@ -234,5 +163,23 @@ body {
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
+}
 
+// Gradient Background
+.track-card-gradient {
+  background: linear-gradient(226deg, #88f4f6, #8860d0, #000000);
+  background-size: 600% 600%;
+  -webkit-animation: main-gradient-animation 16s ease infinite;
+  animation: main-gradient-animation 16s ease infinite;
+}
+
+@-webkit-keyframes main-gradient-animation {
+  0%{background-position:0% 99%}
+  50%{background-position:100% 2%}
+  100%{background-position:0% 99%}
+}
+@keyframes main-gradient-animation {
+  0%{background-position:0% 99%}
+  50%{background-position:100% 2%}
+  100%{background-position:0% 99%}
 }
