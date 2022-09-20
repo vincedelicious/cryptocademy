@@ -14,3 +14,225 @@
 body {
   background-color: #202225;
 }
+
+// .gradient-border {
+//   --borderWidth: 10px;
+//   background: #1D1F20;
+//   position: relative;
+//   border-radius: var(--borderWidth);
+// }
+// .gradient-border:after {
+//   content: '';
+//   position: absolute;
+//   top: calc(-1 * var(--borderWidth));
+//   left: calc(-1 * var(--borderWidth));
+//   height: calc(100% + var(--borderWidth) * 2);
+//   width: calc(100% + var(--borderWidth) * 2);
+//   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+//   border-radius: calc(2 * var(--borderWidth));
+//   z-index: -1;
+//   animation: animatedgradient 3s ease alternate infinite;
+//   background-size: 300% 300%;
+// }
+
+// @keyframes animatedgradient {
+// 	0% {
+// 		background-position: 0% 50%;
+// 	}
+// 	50% {
+// 		background-position: 100% 50%;
+// 	}
+// 	100% {
+// 		background-position: 0% 50%;
+// 	}
+// }
+
+// body{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+//   background: #131313;
+// }
+
+.track-container{
+  position: relative;
+}
+
+.track-container .track-card{
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.track-container .track-card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #a928dc;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.track-container .track-card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+// Background Text of Card
+.track-container .track-card:after{
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255,255,25,0.05)
+}
+
+.track-container .track-card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.track-container .track-card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+
+}
+
+.track-container .track-card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  border-radius: 20px;
+}
+
+.track-container .track-card .contentBx{
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.track-container .track-card:hover .contentBx{
+  height: 210px;
+}
+
+.track-container .track-card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.track-container .track-card .contentBx .size, .track-container .track-card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.track-container .track-card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.track-container .track-card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.track-container .track-card .contentBx .size h3, .track-container .track-card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.track-container .track-card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.track-container .track-card .contentBx .size span:hover{
+  background: #9bdc28;
+}
+
+.track-container .track-card .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.track-container .track-card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.track-container .track-card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.track-container .track-card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.track-container .track-card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.track-container .track-card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+
+}
