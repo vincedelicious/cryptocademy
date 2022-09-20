@@ -12,3 +12,6 @@ application.register("navbar", NavbarController)
 
 import OpenPopupController from "./open_popup_controller"
 application.register("open-popup", OpenPopupController)
+
+import QuizController from "./quiz_controller"
+application.register("quiz", QuizController)
