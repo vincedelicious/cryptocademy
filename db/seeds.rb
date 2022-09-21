@@ -11,10 +11,10 @@
 Lesson.destroy_all
 
 lesson1 = Lesson.create!(title: "Hello World!", points: 50, description: "Welcome to the world of Web3!")
-lesson = Lesson.create(title: "Lesson 2", points: 20, description: "This is lesson 2")
-lesson = Lesson.create(title: "Lesson 3", points: 30, description: "This is lesson 3")
-lesson = Lesson.create(title: "Lesson 4", points: 40, description: "This is lesson 4")
-lesson = Lesson.create(title: "Lesson 5", points: 50, description: "This is lesson 5")
+lesson2 = Lesson.create(title: "Blockchain", points: 20, description: "Tokens, cryptocurrency, NFTs. The Blockchain is what makes it all possible")
+lesson3 = Lesson.create(title: "Tokens", points: 30, description: "BTC, ETH, SOL - You may have heard of some of these, but what are tokens?")
+lesson4 = Lesson.create(title: "Wallets", points: 40, description: "How do you store your valuables? A wallet!")
+lesson5 = Lesson.create(title: "Web3", points: 50, description: "Tying it all together is the idea of Web3")
 
 # Card content is quite large and not formatted well, click the toggle arrow to view
 
