@@ -2,4 +2,33 @@
   <article>
     <h1 class="h1-index mt-5">Search Results</h1>
   </article>
+  <div>
+  <%# Changes %>
+    <% form_with url: search_path, method: :get, html: {target:"_blank"}, data:{turbo:false}, class: "d-flex nav-search" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control"%>
+    <% end %>
+    </div>
+
+  <div class="row ms-5 me-5">
+    <% @lessons.each do |lesson| %>
+      <a class="card-link-index" href="/lessons/<%= lesson.id %>">
+        <div class="card card-index m-2 col-12">
+          <img class="lesson-image" src="<%= asset_path('lesson_backgroun.png') %>" alt="Image">
+          <div class="card-header card-header-index align-items-center text-align-center">
+            <h2 class="card-title card-title-index"><%= lesson.title %></h2>
+          </div>
+          <div class="card-body card-body-index">
+            <p class="card-text"><%= lesson.description %></p>
+            <% if lesson.points != 0 %>
+              <div class="badge-points">
+                <%= render "shared/badges", points: lesson.points %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </a>
+    <% end %>
+  </div>
 </div>
