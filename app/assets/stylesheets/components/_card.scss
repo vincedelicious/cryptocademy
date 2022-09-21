@@ -48,12 +48,16 @@
 .card-show {
   position:absolute;
   height: 80vh;
+  width:80vw;
   padding: 0px;
   top: 0%;
 }
 
 .active-card {
   z-index: 1000;
+  .wrapper {
+    z-index: 1000;
+  }
 }
 
 .card-link-show {

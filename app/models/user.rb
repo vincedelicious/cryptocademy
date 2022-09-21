@@ -4,4 +4,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :user_lessons
+  after_create :create_user_lessons
+
+  private
+
+  def create_user_lessons
+    Lesson.all.each do |lesson|
+      UserLesson.create(
+        user: self,
+        lesson: lesson
+      )
+    end
+  end
 end

@@ -1,9 +1,8 @@
 <div class="container container-show">
   <div class="row ms-5 me-5" data-controller="open-popup">
-    <%# <button type="Submit" class="btn btn-success" data-action="click->open-popup#openPopup">Start</button> %>
     <div class="popupShow" id="popup-show" data-open-popup-target="popup" data-controller="content-swap">
       <% @cards.each do |card| %>
-        <%= render "shared/popups", card: card %>
+        <%= render "shared/popups", card: card, last: @last, lesson: @lesson.id %>
       <% end %>
     </div>
   </div>

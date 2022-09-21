@@ -1,0 +1,51 @@
+<div class="container container-quiz" data-controller="quiz">
+  <div id="hud-quiz d-flex" class="m-0">
+    <h1 class><%= @lesson.title %> - Quiz!</h1>
+    <div class="hud-item-quiz">
+      <p class="hud-prefix-quiz">
+        Score
+      </p>
+      <h1 class="hud-main-text-quiz" id="score-quiz" data-quiz-target="score">
+        0
+      </h1>
+    </div>
+    <div id="hud-item-quiz">
+      <p id="progressText-quiz" data-quiz-target="progressText" class="hud-prefix-quiz">
+      </p>
+      <div id="progressBar-quiz">
+        <div id="progressBarFull-quiz" data-quiz-target="progressBarFull"></div>
+      </div>
+    </div>
+    <img class="quiz-image" src="<%= asset_path('lesson_backgroun.png') %>" alt="Image">
+  </div>
+  <div id="game-quiz" class="justify-center-quiz flex-column-quiz" >
+    <span class="d-none" data-quiz-target="info">
+      <%= @info %>
+    </span>
+    <h1 id="question-quiz" data-quiz-target="questions">What is a blockchain</h1>
+    <div class="choice-container-quiz" data-action="click->quiz#checkAnswer">
+      <div class="choice-prefix-quiz">
+        <p class="choice-prefix-quiz">A</p>
+        <p class="choice-text-quiz" data-quiz-target="choices"  data-number="1"></p>
+      </div>
+    </div>
+    <div class="choice-container-quiz" data-action="click->quiz#checkAnswer">
+      <div class="choice-prefix-quiz">
+        <p class="choice-prefix-quiz">B</p>
+        <p class="choice-text-quiz" data-quiz-target="choices" data-number="2"></p>
+      </div>
+    </div>
+    <div class="choice-container-quiz"  data-action="click->quiz#checkAnswer">
+      <div class="choice-prefix-quiz">
+        <p class="choice-prefix-quiz">C</p>
+        <p class="choice-text-quiz" data-quiz-target="choices" data-number="3"></p>
+      </div>
+    </div>
+    <div class="choice-container-quiz" data-action="click->quiz#checkAnswer">
+      <div class="choice-prefix-quiz">
+        <p class="choice-prefix-quiz">D</p>
+        <p class="choice-text-quiz" data-quiz-target="choices" data-number="4"></p>
+      </div>
+    </div>
+  </div>
+</div>
