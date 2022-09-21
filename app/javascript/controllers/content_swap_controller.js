@@ -18,7 +18,6 @@ export default class extends Controller {
     this.cardTargets[this.index].classList.remove("active-card");
     this.index = this.index + 1;
     this.cardTargets[this.index].classList.add("active-card");
-    // make fetch request to update action of user lessons controller
   }
 
   back(e) {

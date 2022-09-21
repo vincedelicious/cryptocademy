@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
+import swal from "sweetalert";
 
 // Connects to data-controller="quiz"
 export default class extends Controller {
@@ -8,7 +9,7 @@ export default class extends Controller {
     "progressText",
     "score",
     "progressBarFull",
-    "info",
+    "info"
   ];
 
   connect() {
@@ -52,9 +53,10 @@ export default class extends Controller {
       });
       this.availableQuestions.splice(this.questionsIndex, 1);
       this.acceptingAnswers = true;
-    }
-    else{
-      console.log("Finished");
+    } else {
+      swal("Quiz Completed!", "Return to dashboard.", "success").then(function() {
+        window.location = "/dashboard";
+    });
     }
   }
 

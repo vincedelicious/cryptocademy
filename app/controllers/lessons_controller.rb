@@ -7,6 +7,7 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
     @cards = Card.where(lesson: @lesson)
+    @last = @cards.last.id
     @questions = Question.where(lesson: @lesson)
     @answers = Answer.where(question: @questions)
     @user_lesson = UserLesson.find_by(lesson: @lesson, user: current_user)
@@ -14,7 +15,7 @@ class LessonsController < ApplicationController
 
   def search
     if params[:query].present?
-      sql_query = 'title ILIKE :query OR description ILIKE :query'
+      sql_query = "title ILIKE :query OR description ILIKE :query"
       @lessons = Lesson.where(sql_query, query: "%#{params[:query]}%")
     else
       @lessons = []

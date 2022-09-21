@@ -1,10 +1,9 @@
-<div class="container container-quiz">
+<div class="container container-show">
   <div class="row ms-5 me-5" data-controller="open-popup">
     <div class="popupShow" id="popup-show" data-open-popup-target="popup" data-controller="content-swap">
       <% @cards.each do |card| %>
-        <%= render "shared/popups", card: card %>
+        <%= render "shared/popups", card: card, last: @last, lesson: @lesson.id %>
       <% end %>
     </div>
   </div>
-  <%= render "shared/buttons_right", tag: "Take quiz", link: "/lessons/#{@lesson.id}/quiz", lesson: @lesson %>
 </div>
