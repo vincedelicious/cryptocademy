@@ -3,6 +3,7 @@
     <h1 class="h1-index mt-5">Search Results</h1>
   </article>
   <div>
+  <%# Changes %>
     <% form_with url: search_path, method: :get, html: {target:"_blank"}, data:{turbo:false}, class: "d-flex nav-search" do %>
     <%= text_field_tag :query,
       params[:query],
