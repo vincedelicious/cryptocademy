@@ -14,7 +14,7 @@ export default class extends Controller {
   }
 
   next(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.cardTargets[this.index].classList.remove("active-card");
     this.index = this.index + 1;
     this.cardTargets[this.index].classList.add("active-card");
@@ -22,7 +22,7 @@ export default class extends Controller {
   }
 
   back(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.cardTargets[this.index].classList.remove("active-card");
     this.index = this.index - 1;
     this.cardTargets[this.index].classList.add("active-card");
