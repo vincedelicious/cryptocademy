@@ -24,6 +24,7 @@ class LessonsController < ApplicationController
 
   def quiz
     @lesson = Lesson.find(params[:id])
+    @user_lesson = UserLesson.where(user: current_user, lesson: @lesson).first
     @questions = Question.includes(:answers).where(lesson: @lesson)
     @info = []
     @questions.each do |q|
