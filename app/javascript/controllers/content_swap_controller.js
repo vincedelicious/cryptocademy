@@ -18,12 +18,6 @@ export default class extends Controller {
     this.cardTargets[this.index].classList.remove("active-card");
     this.index = this.index + 1;
     this.cardTargets[this.index].classList.add("active-card");
-    // if (currentCard < total) {
-    //   this.cardTargets[currentCard + 1].classList.add("active-card");
-    //   console.log(this.cardTarget);
-    // } else {
-
-    // }
   }
 
   back(e){

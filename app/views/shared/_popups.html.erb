@@ -9,7 +9,12 @@
     <p class="card-text"><%= card.content %></p>
   </div>
   <div class="d-flex col-11 justify-content-between mb-3 ms-4 ps-4">
-    <%= render "shared/buttons_left", tag: "Back", link: "#" %>
-    <%= render "shared/buttons_right", tag: "Next", link: "#" %>
+    <% if card.id == last %>
+      <%= render "shared/buttons_left", tag: "Back", link: "#" %>
+      <%= render "shared/buttons_quiz", tag: "Take Quiz", link: "/lessons/#{lesson}/quiz" %>
+    <% else %>
+      <%= render "shared/buttons_left", tag: "Back", link: "#" %>
+      <%= render "shared/buttons_right", tag: "Next", link: "#" %>
+    <% end %>
   </div>
 </div>
