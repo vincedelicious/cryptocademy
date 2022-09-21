@@ -12,7 +12,7 @@
     </span>
   </a>
   -->
-  <%= link_to user_lesson_path("????"), class: "cta-right", style: "cursor: pointer", data: { method: :patch } do %>
+  <%= link_to user_lesson_path(@user_lesson), class: "cta-right", style: "cursor: pointer", data: { turbo_method: :patch } do %>
     <span><%= tag %></span>
     <span>
       <svg width="40px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

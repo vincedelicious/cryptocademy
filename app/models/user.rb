@@ -12,9 +12,7 @@ class User < ApplicationRecord
     Lesson.all.each do |lesson|
       UserLesson.create(
         user: self,
-        lesson: lesson,
-        card_status: 1, # will remove after
-        completed: false # will remove after
+        lesson: lesson
       )
     end
   end
