@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_19_052048) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_21_011432) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,8 +53,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_052048) do
   create_table "user_lessons", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "lesson_id", null: false
-    t.integer "card_status"
-    t.boolean "completed"
+    t.integer "card_status", default: 1
+    t.boolean "completed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_user_lessons_on_lesson_id"

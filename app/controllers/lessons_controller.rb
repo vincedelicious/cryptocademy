@@ -10,6 +10,7 @@ class LessonsController < ApplicationController
     @last = @cards.last.id
     @questions = Question.where(lesson: @lesson)
     @answers = Answer.where(question: @questions)
+    @user_lesson = UserLesson.find_by(lesson: @lesson, user: current_user)
   end
 
   def search
