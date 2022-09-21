@@ -13,23 +13,18 @@ export default class extends Controller {
     this.cardTargets[this.index].classList.add("active-card");
   }
 
-  next(e){
+  next(e) {
     e.preventDefault();
     this.cardTargets[this.index].classList.remove("active-card");
     this.index = this.index + 1;
     this.cardTargets[this.index].classList.add("active-card");
-    // if (currentCard < total) {
-    //   this.cardTargets[currentCard + 1].classList.add("active-card");
-    //   console.log(this.cardTarget);
-    // } else {
-
-    // }
+    // make fetch request to update action of user lessons controller
   }
 
-  back(e){
+  back(e) {
     e.preventDefault();
     this.cardTargets[this.index].classList.remove("active-card");
-    this.index = this.index -1;
+    this.index = this.index - 1;
     this.cardTargets[this.index].classList.add("active-card");
     // if (currentCard != 0 ) {
     //   this.cardTarget.classList.remove("active-card");
