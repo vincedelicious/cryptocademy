@@ -1,5 +1,5 @@
 class UserLessonsController < ApplicationController
-  def update
+  def add_points
     user_lesson = UserLesson.find(params[:id])
     # Update card status of the user lesson to card being currently view
     # Check if card_status is equal to total number of cards of lesson

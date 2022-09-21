@@ -16,4 +16,8 @@ class User < ApplicationRecord
       )
     end
   end
+
+  def increment_points(finished_lesson_points)
+    self.points += finished_lesson_points
+  end
 end

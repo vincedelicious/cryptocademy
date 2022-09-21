@@ -9,7 +9,8 @@ export default class extends Controller {
     "progressText",
     "score",
     "progressBarFull",
-    "info"
+    "info",
+    "userLessonId"
   ];
 
   connect() {
@@ -38,9 +39,8 @@ export default class extends Controller {
     if (this.availableQuestions.length != 0) {
       this.questionCounter++;
       this.progressTextTarget.innerText = `Question ${this.questionCounter} of ${this.max_questions}`;
-      this.progressBarFullTarget.style.width = `${
-        (this.questionCounter / this.max_questions) * 100
-      }%`;
+      this.progressBarFullTarget.style.width = `${(this.questionCounter / this.max_questions) * 100
+        }%`;
 
       this.questionsIndex = 0;
 
@@ -54,9 +54,12 @@ export default class extends Controller {
       this.availableQuestions.splice(this.questionsIndex, 1);
       this.acceptingAnswers = true;
     } else {
-      swal("Quiz Completed!", "Return to dashboard.", "success").then(function() {
-        window.location = "/dashboard";
-    });
+      const url = `/user_lessons/${this.userLessonIdTarget.innerText}/add_points`
+      fetch(url).then(e => {
+        swal("Quiz Completed!", "Return to dashboard.", "success").then(function () {
+          window.location = "/dashboard";
+        });
+      })
     }
   }
 

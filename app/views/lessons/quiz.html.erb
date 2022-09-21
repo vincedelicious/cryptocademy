@@ -1,6 +1,7 @@
 <div class="container container-quiz" data-controller="quiz">
   <div id="hud-quiz d-flex" class="m-0">
     <h1 class><%= @lesson.title %> - Quiz!</h1>
+    <span class="d-none" data-quiz-target="userLessonId"><%= @user_lesson.id %></span>
     <div class="hud-item-quiz">
       <p class="hud-prefix-quiz">
         Score
