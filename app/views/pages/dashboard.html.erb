@@ -18,44 +18,60 @@
       </div>
     </div>
   </div>
+
+  <%# Track Cards %>
   <div class="d-flex mt-5 mb-5 justify-content-between">
-    <div class="m-2">
-      <a class="card-link-dashboard" href="/lessons">
-        <div class="card card-dashboard m-2 col-12">
-          <div class="card-header card-header-dashboard align-items-center text-align-center">
-            <h2 class="card-title card-title-dashboard">Basic Track</h2>
-          </div>
-          <div class="card-body card-body-dashboard">
-            <p class="card-text">Just getting started</p>
-            <img class="dashboard-pfp mt-2" src="<%= asset_path('track1.png') %>" alt="Image">
-          </div>
+    <%# Basics Track %>
+    <div class="track-container">
+      <div class="track-card">
+        <div class="imgBx">
+          <img src="<%= asset_path('Banana.gif') %>" alt="Basic Banana Juice!" class="gradient-border">
         </div>
-      </a>
+        <div class="contentBx">
+          <h2>Blockchain Basics</h2>
+          <div class="size">
+            <p>Get started learning about Web3 & blockchain!</p>
+          </div>
+          <div class="color">
+          </div>
+          <a class="popup-button" href="/lessons">Start</a>
+        </div>
+      </div>
     </div>
-    <div class="m-2">
-      <a class="card-link-dashboard" href="#">
-        <div class="card card-dashboard m-2 col-12">
-          <div class="card-header card-header-dashboard align-items-center text-align-center">
-            <h2 class="card-title card-title-dashboard">Builder Track</h2>
-          </div>
-          <div class="card-body card-body-dashboard">
-            <p class="card-text">We Building!</p>
-            <img class="dashboard-pfp mt-2" src="<%= asset_path('track1.png') %>" alt="Image">
-          </div>
+    <%# Dev Track %>
+    <div class="track-container">
+      <div class="track-card">
+        <div class="imgBx">
+          <img src="<%= asset_path('builder.gif') %>" alt="The Merge by Azuki">
         </div>
-      </a></div>
-    <div class="m-2">
-      <a class="card-link-dashboard" href="#">
-        <div class="card card-dashboard m-2 col-12">
-          <div class="card-header card-header-dashboard align-items-center text-align-center">
-            <h2 class="card-title card-title-dashboard">Investor Track</h2>
+        <div class="contentBx">
+          <h2>Developer</h2>
+          <div class="size">
+            <p>Build dynamic Web3 Projects on the blockchain!</p>
           </div>
-          <div class="card-body card-body-dashboard">
-            <p class="card-text">Who doesn't like money</p>
-            <img class="dashboard-pfp mt-2" src="<%= asset_path('track1.png') %>" alt="Image">
+          <div class="color">
           </div>
+          <a href="/lessons">Start</a>
         </div>
-      </a>
+      </div>
+    </div>
+    <%# Investor Track %>
+    <div class="track-container">
+      <div class="track-card">
+        <div class="imgBx">
+          <img src="<%= asset_path('stonks.gif') %>" alt="STONKS!">
+        </div>
+        <div class="contentBx">
+          <h2>Investing</h2>
+          <div class="size">
+            <p>Learn how to ride the bull 🐂 & avoid rugs 💸</p>
+          </div>
+          <div class="color">
+          </div>
+          <a href="/lessons">Start</a>
+        </div>
+      </div>
     </div>
   </div>
+  <%# Track Cards End %>
 </div>
