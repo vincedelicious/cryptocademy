@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "pages#landing"
   get "/dashboard", to: "pages#dashboard"
   get "/search", to: "lessons#search"
-  resources :lessons, only: %i[index show] do
+  resources :lessons, only: %i[index show search] do
     resources :cards, only: %i[index show]
   end
 
