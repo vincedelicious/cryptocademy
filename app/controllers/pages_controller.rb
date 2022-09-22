@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def quiz
   end
+
+  def investing
+  end
+
+  def developer
+  end
 end
