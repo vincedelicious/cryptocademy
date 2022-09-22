@@ -9,7 +9,7 @@ export default class extends Controller {
     "progressText",
     "score",
     "progressBarFull",
-    "info"
+    "info",
   ];
 
   connect() {
@@ -21,8 +21,8 @@ export default class extends Controller {
 
     this.questions = JSON.parse(this.infoTarget.innerText);
 
-    this.points = 100;
-    this.max_questions = 2;
+    this.points = 50;
+    this.max_questions = 5;
 
     this.startGame();
   }
@@ -54,7 +54,15 @@ export default class extends Controller {
       this.availableQuestions.splice(this.questionsIndex, 1);
       this.acceptingAnswers = true;
     } else {
-      swal("Quiz Completed!", "Return to dashboard.", "success").then(function() {
+      // this.url = `/user_lessons/${this.userLessonIdTarget.innerText}/add_points`;
+      // fetch(this.url).then((e) => {
+      //   swal("Quiz Completed!", "Return to dashboard.", "success").then(
+      //     function () {
+      //       window.location = "/dashboard";
+      //     }
+      //   );
+      // });
+    swal("Quiz Completed!", "Return to dashboard.", "success").then(function() {
         window.location = "/dashboard";
     });
     }

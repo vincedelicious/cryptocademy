@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root to: "pages#landing"
   get "/dashboard", to: "pages#dashboard"
   get "/search", to: "lessons#search"
+  get "/developer", to: "pages#developer"
+  get "/investing", to: "pages#investing"
   resources :lessons, only: %i[index show search] do
     member do
       get :quiz
