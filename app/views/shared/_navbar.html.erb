@@ -19,17 +19,13 @@
             </form> %>
             <%# <div class="cntr">
 	          <div class="cntr-innr"  data-action="click->navbar#search> %>
-                <%= form_with url: search_path, method: :get, html: {target:"_blank"}, data:{turbo:false}, class: "d-flex nav-search" do %>
-                  <%= text_field_tag :query,
-                    params[:query],
-                    class: "form-control"%>
-                <% end %>
+            <i class="fa-solid fa-magnifying-glass fa-2x pt-1 me-2  white"></i>
             <%# </div> %>
             <%# </div> %>
           </li>
         </li>
         <li class="nav-item">
-          <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+          <%= link_to "My Profile", dashboard_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "PFP.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
