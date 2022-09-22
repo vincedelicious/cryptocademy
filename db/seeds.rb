@@ -18,7 +18,7 @@ lesson5 = Lesson.create(title: "Web3", points: 300, description: "Tying it all t
 
 # Card content is quite large and not formatted well, click the toggle arrow to view
 
-card1 = Card.create!(header: "Hello!", content: "Welcome to Cryptocademy! In this first lesson we’ll just show you some of the keywords & definitions that you will see around the place.
+card1 = Card.create!(header: "Hello!", content: "Welcome to Cryptocademy! <br> In this first lesson we’ll just show you some of the keywords & definitions that you will see around the place.
   We’ll go into more detail for each concept so don’t worry too much about memorising every word",
                      card_number: "1", lesson: lesson1)
 card2 = Card.create!(header: "Blockchain", content: "Imagine a ledger or logbook that keeps a record of transactions. Now imagine if that ledger was on the internet and being looked at by billions of people & computers.
