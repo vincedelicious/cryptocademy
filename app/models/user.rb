@@ -6,6 +6,10 @@ class User < ApplicationRecord
   has_many :user_lessons
   after_create :create_user_lessons
 
+  def increment_points(finished_lesson_points)
+    self.points += finished_lesson_points
+  end
+
   private
 
   def create_user_lessons
@@ -15,9 +19,5 @@ class User < ApplicationRecord
         lesson: lesson
       )
     end
-  end
-
-  def increment_points(finished_lesson_points)
-    self.points += finished_lesson_points
   end
 end
