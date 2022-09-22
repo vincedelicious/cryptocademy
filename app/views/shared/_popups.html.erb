@@ -1,7 +1,6 @@
 <div class="card card-show m-2 col-12" data-content-swap-target="card">
   <div class="card-header card-header-show align-items-center text-align-center" data-content-swap-target="card_no" data-content-swap-order-value="<%= card.card_number %>">
     <div class="d-flex">
-      <i class="fa-regular fa-circle-xmark flex-shrink-1" data-action="click->open-popup#closePopup"></i>
       <h2 class="card-title card-title-show w-100"><%= card.header %></h2>
     </div>
   </div>
@@ -14,7 +13,7 @@
       <%= render "shared/buttons_quiz", tag: "Take Quiz", link: "/lessons/#{lesson}/quiz" %>
     <% else %>
       <%= render "shared/buttons_left", tag: "Back", link: "#" %>
-      <%= render "shared/buttons_right", tag: "Next", card: card %>
+      <%= render "shared/buttons_right", tag: "Next", link: "#", card: card %>
     <% end %>
   </div>
 </div>

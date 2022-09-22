@@ -23,7 +23,7 @@ export default class extends Controller {
     this.questions = JSON.parse(this.infoTarget.innerText);
 
     this.points = 50;
-    this.max_questions = 5;
+    this.max_questions = this.questions.length;
 
     this.startGame();
   }
@@ -39,8 +39,9 @@ export default class extends Controller {
     if (this.availableQuestions.length != 0) {
       this.questionCounter++;
       this.progressTextTarget.innerText = `Question ${this.questionCounter} of ${this.max_questions}`;
-      this.progressBarFullTarget.style.width = `${(this.questionCounter / this.max_questions) * 100
-        }%`;
+      this.progressBarFullTarget.style.width = `${
+        (this.questionCounter / this.max_questions) * 100
+      }%`;
 
       this.questionsIndex = 0;
 
@@ -62,20 +63,23 @@ export default class extends Controller {
       //     }
       //   );
       // });
-    swal("Quiz Completed!", "Return to dashboard.", "success").then(function() {
-        window.location = "/dashboard";
-    });
+      swal("Quiz Completed!", "Return to dashboard.", "success").then(
+        function () {
+          window.location = "/dashboard";
+        }
+      );
     }
   }
 
   checkAnswer(e) {
     if (!this.acceptingAnswers) return;
+    console.log(this.questionCounter);
 
     this.acceptingAnswers = false;
     this.selectedChoice = e.target;
+    console.log(this.selectedChoice);
     this.selectedAnswer =
       this.selectedChoice.querySelector(".choice-text-quiz").dataset["number"];
-
     this.classToApply =
       this.selectedAnswer == this.currentQuestion.answer
         ? "correct-quiz"
