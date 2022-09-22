@@ -1,20 +1,24 @@
 <div class="container container-dashboard">
   <div class="d-flex ms-3 mb-5 mt-5 pt-2 justify-content-start">
     <div class="col-3">
-      <img class="dashboard-pfp" src="<%= asset_path('dashboardpfp.png') %>" alt="Image">
+      <img class="dashboard-pfp" src="<%= asset_path('dashboardpfp.png') %>" alt="UserPFP">
     </div>
-    <div class="col-3">
+    <div class="col-3 px-2">
       <h1 class="ms-2 mb-2"><%= @user.name %></h1>
-      <div class="d-flex">
-        <i class="fa-brands fa-facebook m-2"></i>
-        <i class="fa-brands fa-linkedin-in m-2"></i>
-        <i class="fa-brands fa-slack m-2"></i>
-        <i class="fa-brands fa-twitter m-2"></i>
-        <i class="fa-brands fa-discord m-2"></i>
+
+      <div class="d-flex links">
+        <a class="btn btn-floating" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-floating" href="https://www.twitter.com/vincedelicious/" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-floating" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-floating" href="https://www.linkedin.com/in/vincedelicious/" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-floating" href="https://discord.gg/JddBW8k5/" role="button"><i class="fab fa-discord"></i></a>
+        <a class="btn btn-floating" href="#!" role="button"><i class="fab fa-github"></i></a>
+        <a class="btn btn-floating" href="#!" role="button"><i class="fab fa-slack"></i></a>
       </div>
+
+
       <div class="achievements mt-2">
-        <p class="ms-2">Points Earned: <%= @user.points == nil ? "0" : @user.points %> </p>
-        <img class="dashboard-pfp" src="<%= asset_path('achievements.png') %>" alt="Image">
+        <p class="ms-2">Points: <%= @user.points == nil ? "0" : @user.points %> </p>
       </div>
     </div>
   </div>
@@ -36,6 +40,7 @@
           </div>
           <a class="popup-button" href="/lessons">Start</a>
         </div>
+
       </div>
     </div>
     <%# Dev Track %>
