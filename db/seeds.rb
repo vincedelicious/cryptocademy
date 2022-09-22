@@ -64,7 +64,7 @@ a2 = Answer.create(content: "Exchanged for stuff", correct: true, option: 2, que
 a2 = Answer.create(content: "Logging in", correct: false, option: 3, question: q2)
 a2 = Answer.create(content: "Testing Wallets", correct: true, option: 4, question: q2)
 
-q3 = Question.create(content: "What is okay to share with the public about your Wallet?", lesson: lesson1)
+q3 = Question.create(content: "What is okay to share about your Wallet?", lesson: lesson1)
 a2 = Answer.create(content: "Address", correct: true, option: 1, question: q3)
 a2 = Answer.create(content: "Private Keys", correct: false, option: 2, question: q3)
 a2 = Answer.create(content: "Passphrase", correct: false, option: 3, question: q3)
