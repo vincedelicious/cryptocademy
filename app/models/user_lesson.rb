@@ -7,10 +7,10 @@ class UserLesson < ApplicationRecord
       self.card_status = current_card
       if finished_cards?
         self.completed = true
-        true
+      else
+        false
       end
     end
-    false
   end
 
   def finished_cards?

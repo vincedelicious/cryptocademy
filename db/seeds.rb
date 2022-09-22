@@ -10,11 +10,11 @@
 # But for MVP time we're going to stick with this
 Lesson.destroy_all
 
-lesson1 = Lesson.create!(title: "Hello World!", points: 50, description: "Welcome to the world of Web3!")
-lesson = Lesson.create(title: "Lesson 2", points: 20, description: "This is lesson 2")
-lesson = Lesson.create(title: "Lesson 3", points: 30, description: "This is lesson 3")
-lesson = Lesson.create(title: "Lesson 4", points: 40, description: "This is lesson 4")
-lesson = Lesson.create(title: "Lesson 5", points: 50, description: "This is lesson 5")
+lesson1 = Lesson.create!(title: "Hello World!", points: 300, description: "Welcome to the world of Web3!")
+lesson2 = Lesson.create(title: "Blockchain", points: 200, description: "Tokens, cryptocurrency, NFTs. The Blockchain is what makes it all possible")
+lesson3 = Lesson.create(title: "Tokens", points: 150, description: "BTC, ETH, SOL - You may have heard of some of these, but what are tokens?")
+lesson4 = Lesson.create(title: "Wallets", points: 250, description: "How do you store your valuables? A wallet!")
+lesson5 = Lesson.create(title: "Web3", points: 300, description: "Tying it all together is the idea of Web3")
 
 # Card content is quite large and not formatted well, click the toggle arrow to view
 
@@ -51,3 +51,33 @@ card6 = Card.create!(header: "Quiz", content: "A ledger is like…
 card7 = Card.create!(header: "Congrats!", content: "Nice! You’ve picked up some of the keywords to know in this crypto/Web3 space!
   We will go through all of them in greater detail in the next set of lessons",
                      card_number: "7", lesson: lesson1)
+
+q1 = Question.create(content: "A blockchain is like a ____.", lesson: lesson1)
+a1 = Answer.create(content: "receipt", correct: false, option: 1, question: q1)
+a1 = Answer.create(content: "Lego set", correct: false, option: 2, question: q1)
+a1 = Answer.create(content: "ledger", correct: true, option: 3, question: q1)
+a1 = Answer.create(content: "fence", correct: false, option: 4, question: q1)
+
+q2 = Question.create(content: "What are Tokens used for?", lesson: lesson1)
+a2 = Answer.create(content: "Swapping for prizes!", correct: false, option: 1, question: q2)
+a2 = Answer.create(content: "Exchanged for stuff", correct: true, option: 2, question: q2)
+a2 = Answer.create(content: "Logging in", correct: false, option: 3, question: q2)
+a2 = Answer.create(content: "Testing Wallets", correct: true, option: 4, question: q2)
+
+q3 = Question.create(content: "What is okay to share with the public about your Wallet?", lesson: lesson1)
+a2 = Answer.create(content: "Address", correct: true, option: 1, question: q3)
+a2 = Answer.create(content: "Private Keys", correct: false, option: 2, question: q3)
+a2 = Answer.create(content: "Passphrase", correct: false, option: 3, question: q3)
+a2 = Answer.create(content: "All of the above", correct: false, option: 4, question: q3)
+
+q4 = Question.create(content: "Which of these resembles Web3?", lesson: lesson1)
+a2 = Answer.create(content: "A network of static pages that show information", correct: false, option: 1, question: q4)
+a2 = Answer.create(content: "A network where users own digital assets", correct: true, option: 2, question: q4)
+a2 = Answer.create(content: "A network where users can upload information to others", correct: false, option: 3, question: q4)
+a2 = Answer.create(content: "A network used by sensitive, centralised organisations", correct: false, option: 4, question: q4)
+
+q5 = Question.create(content: "A wallet is made of...", lesson: lesson1)
+a2 = Answer.create(content: "Tokens, NFTs & Cryptocurrencies", correct: false, option: 1, question: q5)
+a2 = Answer.create(content: "Address, Tokens, Keys", correct: false, option: 2, question: q5)
+a2 = Answer.create(content: "NFTs, Keys, Tokens", correct: false, option: 3, question: q5)
+a2 = Answer.create(content: "Keys, Address, Passphrase", correct: true, option: 4, question: q5)

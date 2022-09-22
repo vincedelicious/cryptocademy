@@ -10,6 +10,7 @@ export default class extends Controller {
     "score",
     "progressBarFull",
     "info",
+    "userLessonId"
   ];
 
   connect() {
@@ -38,9 +39,8 @@ export default class extends Controller {
     if (this.availableQuestions.length != 0) {
       this.questionCounter++;
       this.progressTextTarget.innerText = `Question ${this.questionCounter} of ${this.max_questions}`;
-      this.progressBarFullTarget.style.width = `${
-        (this.questionCounter / this.max_questions) * 100
-      }%`;
+      this.progressBarFullTarget.style.width = `${(this.questionCounter / this.max_questions) * 100
+        }%`;
 
       this.questionsIndex = 0;
 
