@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
 import swal from "sweetalert";
-import { csrfToken } from "@rails/ujs";
 
 // Connects to data-controller="quiz"
 export default class extends Controller {
