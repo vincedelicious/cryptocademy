@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
 import swal from "sweetalert";
-import { csrfToken } from "@rails/ujs";
 
 // Connects to data-controller="quiz"
 export default class extends Controller {
@@ -55,31 +54,25 @@ export default class extends Controller {
       this.availableQuestions.splice(this.questionsIndex, 1);
       this.acceptingAnswers = true;
     } else {
+      console.log("here");
       this.url = `/user_lessons/${this.userLessonIdTarget.innerText}/add_points`;
       fetch(this.url, {
         method: "PATCH"
       }).then((e) => {
-        swal("Quiz Completed!", "Return to dashboard.", "success").then(
+        swal("Quiz Completed!", "Return to lessons.", "success").then(
           function () {
-            window.location = "/dashboard";
+            window.location = "/lessons";
           }
         );
       });
-      swal("Quiz Completed!", "Return to dashboard.", "success").then(
-        function () {
-          window.location = "/dashboard";
-        }
-      );
     }
   }
 
   checkAnswer(e) {
     if (!this.acceptingAnswers) return;
-    console.log(this.questionCounter);
 
     this.acceptingAnswers = false;
     this.selectedChoice = e.target;
-    console.log(this.selectedChoice);
     this.selectedAnswer =
       this.selectedChoice.querySelector(".choice-text-quiz").dataset["number"];
     this.classToApply =
