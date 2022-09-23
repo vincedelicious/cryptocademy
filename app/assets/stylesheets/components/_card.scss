@@ -127,7 +127,7 @@
   font-family:Arial, Helvetica, sans-serif;
   font-size: 25px;
   line-height: 30px;
-  padding:50px;
+  padding:50px 50px 0px 50px;
 }
 
 .card-header-show {
@@ -172,9 +172,18 @@
 
 .card-header-dashboard
  {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
   min-height: 90px;
   padding-top: 25px;
+}
+
+.trix-content {
+  text-align: left;
+}
+
+.trix-content img {
+  max-height: 250px;
+  max-width: 300px;
 }

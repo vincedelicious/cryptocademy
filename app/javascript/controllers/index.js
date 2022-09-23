@@ -15,3 +15,6 @@ application.register("open-popup", OpenPopupController)
 
 import QuizController from "./quiz_controller"
 application.register("quiz", QuizController)
+
+import VideoPlayerController from "./video_player_controller"
+application.register("video-player", VideoPlayerController)
