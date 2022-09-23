@@ -16,4 +16,8 @@ class UserLesson < ApplicationRecord
   def finished_cards?
     card_status == lesson.cards.count
   end
+
+  def next
+    UserLesson.find(id + 1)
+  end
 end
