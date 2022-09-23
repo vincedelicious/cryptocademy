@@ -19,7 +19,6 @@
             </form> %>
             <%# <div class="cntr">
 	          <div class="cntr-innr"  data-action="click->navbar#search> %>
-            <i class="fa-solid fa-magnifying-glass fa-2x pt-1 me-2  white"></i>
             <%# </div> %>
             <%# </div> %>
           </li>
@@ -27,6 +26,7 @@
         <li class="nav-item">
           <%= link_to "My Profile", dashboard_path, class: "nav-link" %>
         </li>
+        <i class="fa-solid fa-magnifying-glass fa-2x pt-1 ms-2 me-3 pt-2  white"></i>
         <li class="nav-item dropdown">
           <%= image_tag "PFP.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
