@@ -3,24 +3,24 @@
     <h1>Blockchain Basics</h1>
     <p>Just getting started? This is the place to be!</p>
   </div>
-  <div class="row ms-5 me-5">
-    <% @lessons.each_with_index do |lesson, index| %>
-      <a class="card-link-index" href="/lessons/<%= lesson.id %>">
+  <div class="row d-flex justify-content-center">
+    <% current_user.user_lessons.each_with_index do |user_lesson, index| %>
+      <%= link_to lesson_path(user_lesson.lesson), class:"card-link-index col-7 #{"locked" if user_lesson.locked?}" do %>
         <div class="card card-index m-2 col-12">
           <img class="lesson-image" src="<%= asset_path("Lessons/lesson#{index + 1}.png") %>" alt="Image">
           <div class="card-header card-header-index align-items-center text-align-center">
-            <h2 class="card-title card-title-index"><%= lesson.title %></h2>
+            <h2 class="card-title card-title-index"><%= user_lesson.lesson.title %></h2>
           </div>
           <div class="card-body card-body-index">
-            <p class="card-text"><%= lesson.description %></p>
-            <% if lesson.points != 0 %>
+            <p class="card-text"><%= user_lesson.lesson.description %></p>
+            <% if user_lesson.lesson.points != 0 %>
               <div class="badge-points">
-                <%= render "shared/badges", points: lesson.points %>
+                <%= render "shared/badges", points: user_lesson.lesson.points %>
               </div>
             <% end %>
           </div>
         </div>
-      </a>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -13,11 +13,19 @@ class User < ApplicationRecord
   private
 
   def create_user_lessons
-    Lesson.all.each do |lesson|
-      UserLesson.create(
-        user: self,
-        lesson: lesson
-      )
+    Lesson.all.each_with_index do |lesson, index|
+      if index.zero?
+        UserLesson.create(
+          user: self,
+          lesson: lesson,
+          locked: false,
+        )
+      else
+        UserLesson.create(
+          user: self,
+          lesson: lesson,
+        )
+      end
     end
   end
 end
