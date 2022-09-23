@@ -1,6 +1,7 @@
 class UserLesson < ApplicationRecord
   belongs_to :user
   belongs_to :lesson
+  default_scope { order(created_at: :asc) }
 
   def increment_card_status?(current_card)
     if self.card_status < current_card
